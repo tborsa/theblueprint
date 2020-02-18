@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
-import Layout from '../components/layout'
+import Main from '../components/layouts/Main'
 import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -13,8 +13,7 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
-      <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+      <Main location={this.props.location} >
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <div className="wrapper">
@@ -29,8 +28,7 @@ class RootIndex extends React.Component {
               })}
             </ul>
           </div>
-        </div>
-      </Layout>
+      </Main>
     )
   }
 }
