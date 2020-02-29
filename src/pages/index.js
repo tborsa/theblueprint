@@ -4,7 +4,9 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Main from '../components/layouts/Main'
+import Parallax from '../components/Parallax'
 import ArticlePreview from '../components/article-preview'
+import Slices from '../components/Slices'
 
 class RootIndex extends React.Component {
   render() {
@@ -15,7 +17,9 @@ class RootIndex extends React.Component {
     return (
       <Main location={this.props.location} >
           <Helmet title={siteTitle} />
-          <Hero data={author.node} />
+          <Parallax height='100vh'>
+            <Slices />
+          </Parallax>
           <div className="wrapper">
             <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
@@ -28,6 +32,9 @@ class RootIndex extends React.Component {
               })}
             </ul>
           </div>
+          <Parallax height='60vh'>
+            <Hero data={author.node} />
+          </Parallax>
       </Main>
     )
   }
