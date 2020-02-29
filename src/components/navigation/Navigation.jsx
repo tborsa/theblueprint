@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 
 const Bar = styled.div`
   position: sticky;
+  padding: 4px;
   top: 0px;
   align-items: center;
   z-index: 100;
@@ -39,7 +40,7 @@ const Item = styled.div`
 const Navigation = () => {
   return (
     <Bar>
-      <Logo src={'./images/logodark.png'}/>
+      <Logo src={'https://pngimage.net/wp-content/uploads/2018/06/logo-placeholder-png-7.png'}/>
       <Nav>
         <Link to={"/"}>One</Link>
         <Link to={"/"}>Two</Link>
