@@ -36,7 +36,7 @@ export const fonts = {
 }
 
 export const colors = {
-  primary: '#E9446A',
+  primary: '#fffcf5',
   secondary: '#333333',
   light: '#A8A8A8',
   dark: '#222222',
